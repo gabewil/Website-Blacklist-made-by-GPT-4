@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blacklist Extension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f3f4f8;
+        padding: 1rem;
+        color: #3c3c3c;
+        width: 300px;
+      }
+
+      h1, h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      button {
+        background-color: #4caf50;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #blacklist {
+        list-style-type: none;
+        margin-bottom: 1rem;
+      }
+
+      #blacklist li {
+        margin-bottom: 0.25rem;
+      }
+
+      #message {
+        color: #4caf50;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blacklist</h1>
+    <input id="domain" type="text" placeholder="Enter domain" />
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <button id="clear">Clear All</button>
+    <p id="message"></p>
+    <ul id="blacklist"></ul>
+    <h2>Active Time Range</h2>
+    <input id="startTime" type="time" />
+    <input id="endTime" type="time" />
+    <button id="setTimeRange">Set Time Range</button>
+    <p id="currentTimeRange">Current time range: <span id="timeRangeDisplay"></span></p>
+    <script src="popup.js"></script>
+  </body>
+</html>

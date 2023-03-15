@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Website Blacklist",
+  "version": "1.0",
+  "description": "Block access to blacklisted websites.",
+  "permissions": ["webNavigation", "<all_urls>", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+  }
+}
